@@ -1,4 +1,5 @@
-<img width="32" height="32" alt="icon32" src="https://github.com/user-attachments/assets/7132555c-112a-465e-a202-278c687083d4" /> # GmailMod-1.0
+# GmailMod-1.0 <img width="16" height="16" alt="icon16" src="https://github.com/user-attachments/assets/0365526d-57a8-42cd-a243-1fc462648b05" />
+
 
 Take control of your inbox. Dynamically manage, select, and bulk-unsubscribe from email subscriptions directly inside your Gmail settings panel with a single click.
 Try it through the link bellow!:-
