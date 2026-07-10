@@ -1,0 +1,213 @@
+/* Base header trigger layout elements */
+.primary-modify-btn {
+    background-color: #c5221f !important; /* Bold Red Background */
+    color: #000000 !important;            /* Solid Black Text Color for readability */
+    border: 1px solid #b01f1c !important; /* Deep red border line */
+    margin-left: 16px !important;
+    padding: 6px 18px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;          /* Made slightly bolder to pop */
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    font-family: 'Google Sans', Roboto, Arial, sans-serif !important;
+    transition: background-color 0.1s ease-in-out !important;
+}
+
+/* Hover configuration so it reacts cleanly when the mouse moves over it */
+.primary-modify-btn:hover {
+    background-color: #b01f1c !important; /* Slightly darker red on hover */
+    color: #ffffff !important;            /* Flips text to white on hover for high contrast */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3) !important;
+}
+
+/* Modal Dim Background Mask Overlay */
+#sub-modal-backdrop {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: rgba(0, 0, 0, 0.5) !important; /* Dims the background down */
+    z-index: 999999 !important; /* Stay absolutely on top of Gmail's layouts */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-family: 'Google Sans', Roboto, Arial, sans-serif !important;
+}
+
+/* Main Dedicated Modal Workspace Window Canvas */
+#sub-modal-window {
+    background-color: #ffffff !important;
+    width: 700px !important; /* Matches matching frame rows dimensions standard width */
+    max-width: 90% !important;
+    height: 550px !important;
+    max-height: 85vh !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    animation: modalFadeIn 0.2s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from { transform: translateY(15px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Modal Header Layout Spec */
+#sub-modal-header {
+    padding: 16px 24px !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    background-color: #f8f9fa !important;
+}
+
+#sub-modal-header h2 {
+    margin: 0 !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    color: #202124 !important;
+}
+
+#sub-modal-close-btn {
+    background: transparent !important;
+    border: none !important;
+    font-size: 26px !important;
+    cursor: pointer !important;
+    color: #5f6368 !important;
+    line-height: 1 !important;
+}
+
+#sub-modal-close-btn:hover {
+    color: #202124 !important;
+}
+
+/* Modal Scrolling List Body */
+#sub-modal-body {
+    flex: 1 !important;
+    padding: 12px 24px !important;
+    overflow-y: auto !important; /* Adds isolated scroll bar strictly inside list canvas */
+    background-color: #ffffff !important;
+}
+
+#sub-modal-list-container {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* In-Modal Subscription Entry Row Rules */
+.modal-sub-row {
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 8px !important;
+    border-bottom: 1px solid #f1f3f4 !important;
+}
+
+.modal-sub-row:hover {
+    background-color: #f8f9fa !important;
+}
+
+.modal-item-checkbox {
+    width: 16px !important;
+    height: 16px !important;
+    margin-right: 18px !important;
+    cursor: pointer !important;
+    accent-color: #c5221f !important;
+}
+
+.modal-sub-details {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+}
+
+.modal-sub-name {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #202124 !important;
+}
+
+.modal-sub-email {
+    font-size: 12px !important;
+    color: #5f6368 !important;
+}
+
+/* Fixed Footer Section layout rules */
+#sub-modal-footer {
+    padding: 16px 24px !important;
+    border-top: 1px solid #e0e0e0 !important;
+    background-color: #f8f9fa !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.footer-left-actions {
+    display: flex !important;
+    gap: 8px !important;
+}
+
+/* Universal Button Utilities */
+.sub-btn {
+    border: 1px solid #dadce0 !important;
+    background-color: #ffffff !important;
+    padding: 6px 14px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    white-space: nowrap !important;
+}
+
+.secondary-btn {
+    color: #3c4043 !important;
+}
+
+.secondary-btn:hover {
+    background-color: #f1f3f4 !important;
+}
+
+.bulk-danger-btn {
+    background-color: #c5221f !important;
+    color: #ffffff !important;
+    border: 1px solid transparent !important;
+}
+
+.bulk-danger-btn:hover {
+    background-color: #b01f1c !important;
+}
+
+/* Logo Frame Layout Position Constraints */
+.modal-sub-logo-wrapper {
+    width: 36px !important;
+    height: 36px !important;
+    margin-right: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+}
+
+/* If the row has a direct PNG/SVG image asset */
+.modal-sub-logo-img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+}
+
+/* If the row falls back to a custom colored circle letter icon */
+.modal-sub-logo-avatar {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+}
